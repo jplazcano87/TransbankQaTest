@@ -12,6 +12,8 @@ export const createUser = (req, res) => {
     const user = req.body;
 
     users.push({...user, id: uuid()});
+
+    res.send(users);
     
     console.log(`User [${user.username}] added to the database.`);
 };
